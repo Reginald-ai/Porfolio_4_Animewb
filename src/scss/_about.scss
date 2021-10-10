@@ -1,0 +1,58 @@
+#navbar-about {
+    .navbar-nav {
+        border: 1px solid #fff;
+
+        .nav-link {
+            color: white;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+.anime-about-1 {
+    background: url('../img/waves/Wave-100s-1504px.svg')no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    padding: 200px 0;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(234deg, rgba(20, 51, 100, 0.3) 19%, #653af0 100%);
+        opacity: 0.8;
+    }
+}
+.my-200px{
+    margin: 100px 0;
+    @include breakpoint-up(medium){
+    margin: 200px 0;
+
+    }
+}
+.anime-about-2 {
+    margin: 200px 0;
+    // .overlay {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: linear-gradient(234deg, rgba(20, 51, 100, 0.3) 19%, #653af0 100%);
+    //     opacity: 0.8;
+    // }
+    .row{
+        .col-md-6{
+            img{
+                border-radius: 25px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+        }
+    }
+}

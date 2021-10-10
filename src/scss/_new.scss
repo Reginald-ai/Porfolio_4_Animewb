@@ -1,0 +1,309 @@
+body {
+    height: 100vh;
+}
+
+.navbar {
+    justify-content: center;
+
+    .navbar-nav {
+        flex-direction: row;
+        border-radius: 40px;
+        border: 1px solid #797979;
+        padding: 10px 20px;
+
+        .nav-item:not(:first-child) {
+            margin-left: 15px;
+        }
+
+        .nav-link {
+            color: #8d8d8d;
+
+            &:hover {
+                color: #fb213f;
+            }
+        }
+    }
+}
+
+.anime-blog-2 {
+    margin-top: 90px;
+
+    .container {
+        width: 80%;
+    }
+
+    .carousel_b {
+        border: 2px solid black;
+        padding: 15px 0;
+
+        @include breakpoint-up(medium){
+            padding: 60px;
+        height: 450px;
+
+        }
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        position: relative;
+
+        &_slider {
+            width: 300%;
+            display: flex;
+            overflow: hidden;
+            transition: all 0.7s ease;
+
+            &_item {
+                flex: 0 0 100%;
+                text-align: center;
+                margin: 0 auto;
+
+                .img-b {
+                    border-radius: 20px;
+                    animation: down 3s ease 1s forwards;
+                    transition: all 3.5s ease;
+                    width: 100%;
+                    height: 300px;
+                    position: relative;
+                }
+                #img-1{
+                    background: url('../img/steve21.jpg')no-repeat;
+                    background-size: cover;
+
+                }
+                #img-2{
+                    background: url('../img/shield-hero2.png')no-repeat;
+
+                }
+                #img-3{
+                    background: url('../img/madoka7.png')no-repeat;
+
+                }
+                @keyframes down {
+                    0% {
+                        background-position: bottom;
+
+                    }
+
+                    100% {
+                        background-position: center;
+                    }
+                }
+            }
+        }
+
+        &_controls {
+            position: absolute;
+            width: 100%;
+
+            .btn-left {
+                left: 5%;
+                @include breakpoint-up(medium){
+                    left: 1%;
+                }
+                position: absolute;
+                transform: translateY(-50%);
+            }
+
+            .btn-right {
+                right: 5%;
+                @include breakpoint-up(medium){
+                    right: 1%;
+                }
+                position: absolute;
+                transform: translateY(-50%);
+            }
+
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                background: #e8eaed;
+                border-radius: 100%;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+}
+
+.anime-blog-3{
+    margin: 50px 0px;
+    .carousel-c{
+        border: 1px solid black;
+        height: 400px;
+        border-radius: 20px;
+
+        padding: 20px;
+        @include breakpoint-up(medium){
+        padding: 40px;
+
+        }
+        position: relative;
+        &-slider{
+            // position: relative;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            width: 100%;
+            height: 100%;
+            &-item{
+                text-shadow: rgb(0, 0, 0) 0px 0px 10px, rgb(0, 0, 0) 0px 0px 10px;
+                transition: all 1s ease;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 20px;
+                @include breakpoint-up(medium){
+                    width: 95%;
+                    height: 90%;
+                }
+               
+                @include breakpoint-up(xlarge){
+                    width: 95%;
+                    height: 85%;
+                }
+               
+                width: 95%;
+                height: 95%;
+              text-align: center;
+              
+              --bs-gutter-x:0;
+              --bs-gutter-y: 0;
+              margin-top: 0;
+              margin-right:0;
+              margin-left:0;
+              .carousel-c-slider-item-2{
+                @include breakpoint-up(large){
+                    padding-left: 80px;
+                    padding-bottom:20px ;
+                }
+                 
+                h4,p,cite{
+                    color: white;
+                }
+              h4{
+                  margin-bottom: 10px;
+                  
+                  @include breakpoint-up(medium){
+                      margin: 0;
+                  }
+              }
+              cite{
+                  margin-bottom: 40px;
+                  display: block;
+                  @include breakpoint-up(medium){
+                    margin: 0;
+                    display: none;
+                }
+              }
+                p{
+                    display: none;
+                    @include breakpoint-up(medium){
+                        display: block;
+                    }
+                }
+              }
+              .carousel-c-slider-item-3{
+                @include breakpoint-up(large){
+                    padding-right: 80px;
+                    padding-bottom:30px ;
+                }
+                 
+                h4,p,cite{
+                    color: white;
+                }
+              h4{
+                  margin-bottom: 10px;
+                  
+                  @include breakpoint-up(medium){
+                      margin: 0;
+                  }
+              }
+              cite{
+                  margin-bottom: 40px;
+                  display: block;
+                  @include breakpoint-up(medium){
+                    margin: 0;
+                    display: none;
+                }
+              }
+                p{
+                    display: none;
+                    @include breakpoint-up(medium){
+                        display: block;
+                    }
+                }
+              }
+            }
+            &-item:nth-child(1){
+                z-index: 1;
+                opacity: 1;
+                background: url('../img/steve21.jpg')no-repeat;
+                background-size: cover;
+                animation: up-news-1 2s ease 1 forwards ;
+            
+            }
+            @keyframes up-news-1 {
+                from{
+                    background-position: unset;
+                }
+                to{
+                    background-position: center;
+                }
+            }
+            &-item:nth-child(2){
+                z-index: 0;
+                opacity: 0;
+                background: url('../img/madoka7.png')no-repeat;
+                background-size: cover;
+               
+                
+          
+            }
+            &-item:nth-child(3){
+                z-index: 0;
+                opacity: 0;
+                background: url('../img/shield-hero2.png')no-repeat;
+                background-size: cover;
+               
+                
+            }
+        }
+        &-controls{
+            .btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                background: #e8eaed;
+                border-radius: 100%;
+                cursor: pointer;
+                user-select: none;
+                z-index: 9999;
+            }
+            .btn-left{
+                left: 30px;
+                @include breakpoint-up(medium){
+                left: 50px;
+
+                }
+            }
+            .btn-right{
+                right:  30px;
+                @include breakpoint-up(medium){
+                right: 50px;
+
+                }
+            }
+        }
+    }
+}
