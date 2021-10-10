@@ -1,0 +1,188 @@
+.anime-prize-1 {
+    margin: 80px auto 80px;
+    padding: 0 20px;
+
+    @include breakpoint-up(medium) {
+        padding: 0;
+    }
+
+    .anime-title {
+
+        .d-flex {
+            p {
+                margin: 0;
+
+            }
+        }
+
+        .toggle {
+
+            position: relative;
+
+            input[type="checkbox"] {
+                appearance: none;
+                width: 60px;
+                height: 30px;
+                background-color: rgb(0, 111, 155);
+
+                border-radius: 40px;
+                position: relative;
+                transition: 0.4s ease;
+            }
+
+            input:checked[type="checkbox"] {
+                background-color: rgb(118, 38, 247);
+            }
+
+            input[type="checkbox"]::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                background: rgb(255, 255, 255);
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                transform: scale(1.1);
+                pointer-events: none;
+                transition: all 0.5s ease;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            }
+
+            input:checked[type="checkbox"]::before {
+                left: 50%;
+            }
+
+        }
+    }
+
+    .prize-offer-1 {
+        margin-top: 90px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+        height: 100%;
+
+        span {
+            font-size: 25px;
+            align-self: center;
+            font-weight: bolder;
+        }
+
+        h5 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: rgb(125, 87, 230);
+
+
+        }
+
+        h1 {
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            font-weight: bolder;
+
+        }
+
+        p:nth-of-type(1) {
+            border-top: 1px solid rgb(221, 221, 221);
+            margin-top: 20px;
+        }
+
+        p {
+            // border-top: 1px solid rgb(196, 196, 196);
+            border-bottom: 1px solid rgb(221, 221, 221);
+            padding: 15px;
+            margin: 0;
+            font-weight: 600;
+            color: rgb(61, 61, 61);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid white;
+            outline: none;
+            box-shadow: none;
+            &:hover{
+       
+            }
+        }
+    }
+
+    #prize-2 {
+        height: 490px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(-30px);
+        z-index: 99;
+        position: relative;
+        background: linear-gradient(311deg, #77038ccc, #1966daf0);
+        color: white;
+
+        p,
+        h1,
+        h5,
+        span {
+            color: white;
+        }
+        button{
+            &:hover{
+                background: #e6e6e6;
+                color: #4e4141;
+                font-weight: 500;
+                border: 1px solid white;
+            outline: none;
+
+
+            }
+        }
+    }
+
+    #prize-3 {
+        transform: translateX(-10px);
+        button{
+            color: #4e4141;
+            font-weight: 500;
+            border: 1px solid rgb(179, 179, 179);
+            background: transparent;
+
+            &:hover{
+                color: white;
+    background-color: #b5b5b5;
+    outline: none;
+
+            }
+        }
+    }
+
+    #prize-1 {
+        transform: translateX(10px);
+        button{
+            color: #4e4141;
+            font-weight: 500;
+            border: 1px solid rgb(179, 179, 179);
+            background: transparent;
+
+            &:hover{
+                color: white;
+                background-color: #b5b5b5;
+            outline: none;
+
+            }
+        }
+    }
+    #anime-prize-yearly.active{
+        display: none;
+    }
+    #anime-prize-monthly{
+        display: none;
+    }
+    #anime-prize-monthly.active{
+        display: flex;
+    }
+}

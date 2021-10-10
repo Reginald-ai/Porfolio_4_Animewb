@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Poppins&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    height: 50vh;
+}
+
+.anime-hero-1 {
+    background: url('../img/waves/Wave-100s-1504px.svg')no-repeat;
+
+    .row {
+        height: 100vh;
+        margin: 0;
+
+        .left {
+            position: relative;
+
+            .overlay {
+                background: linear-gradient(45deg, #c4b1ff, #ffffff);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                opacity: 0.8;
+
+                @include breakpoint-up(medium) {
+                    height: 100%;
+                }
+            }
+
+            .navbar {
+                justify-content: center;
+
+                .navbar-nav {
+                    flex-direction: row;
+                    border-radius: 40px;
+                    border: 1px solid #6c757d;
+                    padding: 10px 20px;
+
+                    .nav-item:not(:first-child) {
+                        margin-left: 15px;
+                    }
+
+                    .nav-link {
+                        color: rgb(41, 41, 41);
+
+                        &:hover {
+                            color: #fb213f;
+                        }
+                    }
+                }
+            }
+
+            .img-bg-1 {
+                margin-top: 40px;
+                height: 50%;
+                object-fit: cover;
+                width: 100%;
+                display: block;
+                position: relative;
+
+                @include breakpoint-up(medium) {
+                    display: none;
+                }
+            }
+
+            .logo {
+                position: relative;
+
+                margin-top: 30px;
+                padding: 0;
+
+                h4 {
+                    font-weight: 700;
+                    font-size: 25px;
+                    color: #055160;
+
+                    @include breakpoint-up(small) {
+                        font-size: 30px;
+
+                    }
+                }
+            }
+
+            .section {
+                position: relative;
+
+                margin: 20px 0;
+
+                @include breakpoint-up(medium) {
+                    margin: 20px 0;
+                }
+
+                span {
+                    color: #dc3545;
+                }
+
+                h1 {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 30px;
+
+                    @include breakpoint-up(medium) {
+                        letter-spacing: 7x;
+                        font-size: 80px;
+
+                    }
+                }
+
+                p {
+                    margin-top: 30px;
+                    text-align: center;
+                }
+
+                .sec-container {
+                    line-height: 30px;
+                    width: 100%;
+                    margin: 0 auto;
+
+                    @include breakpoint-up(medium) {
+                        width: 60%;
+                    }
+
+                    .input-group {
+                        max-width: 80%;
+                        margin: 0 auto;
+
+                        .form-control {
+                            box-shadow: none;
+                            border-radius: 11px 0px 0px 11px;
+
+
+                        }
+
+                        .btn {
+                            box-shadow: none;
+                            border-radius: 0px 11px 11px 0px;
+                            background: #b04fc1;
+                            border: 1px solid #b04fc1 ;
+                            &:hover{
+                                background: #71327c;
+                                border: 1px solid #82378f ;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        .right {
+            padding: 10px;
+
+            .img-bg-2 {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+                display: none;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                position: relative;
+
+                @include breakpoint-up(medium) {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+}
+
+.anime-hero-2 {
+    margin: 100px 0;
+
+    .container {
+        font-family: 'Open Sans', sans-serif;
+
+        .row {
+            .title-section {
+                margin-top: 60px;
+
+                #h4-2 {
+                    font-weight: bolder;
+                    margin-bottom: 20px;
+                    color: #013a46;
+                }
+            }
+
+            .box {
+                height: 200px;
+                padding: 10px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: all 0.5s ease;
+                position: relative;
+
+                @include breakpoint-up(large) {
+                    padding: 20px;
+                }
+
+                @include breakpoint-up(medium) {
+                    max-width: 354px;
+                }
+
+                h5 {
+                    font-size: 17px;
+
+                    font-weight: 700;
+                    color: #3a628a;
+
+                }
+
+                p {
+                    font-size: 13px;
+                }
+
+                img {
+                    display: block;
+                    margin-left: auto;
+                }
+
+                &:hover::after {
+                    opacity: 0.1;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    background-color: #013a46;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+
+            #box-1 {
+                border-top: 3px solid #ff006e;
+
+                @include breakpoint-up(large) {
+
+                    transform: translateY(88px);
+                }
+
+                @include breakpoint-up(xxl) {
+
+                    transform: translateY(60px);
+                }
+            }
+
+            #box-2 {
+                border-top: 3px solid #8338ec;
+
+
+            }
+
+            #box-3 {
+                border-top: 3px solid #3a86ff;
+
+            }
+
+            #box-4 {
+                border-top: 3px solid #fb5607;
+
+                @include breakpoint-up(large) {
+
+                    transform: translateY(-88px);
+                }
+
+                @include breakpoint-up(xxl) {
+
+                    transform: translateY(-60px);
+                }
+
+            }
+        }
+    }
+
+
+}
+
+footer {
+    background: url('../img/waves/Wave-100s-1504px.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 20px 0px 45px 0px;
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(45deg, #004379, #61a5bf);
+        opacity: 0.8;
+    }
+
+    .f-navbars {
+        position: relative;
+
+        .logo-footer {
+            padding: 20px 0;
+
+            h4 {
+                color: white;
+            }
+        }
+
+        .f-services {
+            color: #ffffff;
+
+            #f-h-3 {
+                // font-family: 'Open Sans', sans-serif;
+            }
+
+            .f-spacing-h {
+                margin-top: 30px;
+
+            }
+
+            .navbar-nav {
+                color: #ffffff;
+
+                .nav-link {
+                    color: #e8e8e8;
+                    font-size: 14px;
+                    padding-top: 10px;
+                }
+
+
+            }
+        }
+    }
+
+    .f-copyrights {
+        position: relative;
+        border-top: 1px solid #c6d9eb;
+        padding-top: 20px;
+        .navbar-nav{
+            .nav-item:not(:first-child){
+                margin-left: 15px;
+                margin-top: 0;
+                padding-top: 0;
+            }
+            .nav-link{
+                color: #fff;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+        
+    }
+
+}
